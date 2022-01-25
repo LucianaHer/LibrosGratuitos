@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch} from "react-redux";
 import "./Item.css";
 import { getBookDetail } from "../../actions";
-import bookError from '../../img/libroError.jpg'
 
 
 function Item({book}) {
