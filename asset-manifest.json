@@ -3,13 +3,13 @@
     "main.css": "/LibrosGratuitos/static/css/main.1f8705c7.chunk.css",
     "main.js": "/LibrosGratuitos/static/js/main.08f0f34b.chunk.js",
     "main.js.map": "/LibrosGratuitos/static/js/main.08f0f34b.chunk.js.map",
-    "runtime-main.js": "/LibrosGratuitos/static/js/runtime-main.d5408791.js",
-    "runtime-main.js.map": "/LibrosGratuitos/static/js/runtime-main.d5408791.js.map",
+    "runtime-main.js": "/LibrosGratuitos/static/js/runtime-main.2754d55b.js",
+    "runtime-main.js.map": "/LibrosGratuitos/static/js/runtime-main.2754d55b.js.map",
     "static/js/2.ea9e5343.chunk.js": "/LibrosGratuitos/static/js/2.ea9e5343.chunk.js",
     "static/js/2.ea9e5343.chunk.js.map": "/LibrosGratuitos/static/js/2.ea9e5343.chunk.js.map",
     "static/css/3.64096b1f.chunk.css": "/LibrosGratuitos/static/css/3.64096b1f.chunk.css",
-    "static/js/3.cc869a47.chunk.js": "/LibrosGratuitos/static/js/3.cc869a47.chunk.js",
-    "static/js/3.cc869a47.chunk.js.map": "/LibrosGratuitos/static/js/3.cc869a47.chunk.js.map",
+    "static/js/3.0778d44b.chunk.js": "/LibrosGratuitos/static/js/3.0778d44b.chunk.js",
+    "static/js/3.0778d44b.chunk.js.map": "/LibrosGratuitos/static/js/3.0778d44b.chunk.js.map",
     "index.html": "/LibrosGratuitos/index.html",
     "static/css/3.64096b1f.chunk.css.map": "/LibrosGratuitos/static/css/3.64096b1f.chunk.css.map",
     "static/css/main.1f8705c7.chunk.css.map": "/LibrosGratuitos/static/css/main.1f8705c7.chunk.css.map",
@@ -18,7 +18,7 @@
     "static/media/libro1.f4e529df.gif": "/LibrosGratuitos/static/media/libro1.f4e529df.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.d5408791.js",
+    "static/js/runtime-main.2754d55b.js",
     "static/js/2.ea9e5343.chunk.js",
     "static/css/main.1f8705c7.chunk.css",
     "static/js/main.08f0f34b.chunk.js"
