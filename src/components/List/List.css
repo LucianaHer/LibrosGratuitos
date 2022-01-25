@@ -1,0 +1,118 @@
+.divContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+.structure{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.head {
+  width: 90%;
+  font-size: 20px;
+  color: blue;
+  margin-top: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.languagecontainer{
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.languageButton {
+  font-size: 15px;
+  border: 3px solid blue;
+  color: blue;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  margin-left: 10px;
+}
+
+.activeLang {
+  font-size: 17px;
+  background-color: rgb(97, 199, 202);
+}
+.languageButton:hover, .activeLang:hover {
+  background-color: blue;
+  color: white;
+}
+
+.grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 3fr);
+  grid-column-gap: 2em; 
+  grid-row-gap: 1.5em;
+  padding: 3px;
+}
+
+.buttonCont {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5%;
+  justify-content:center;
+}
+
+.btnPrev {
+  cursor: pointer;
+  background-image: url("../../img/Actions-go-previous-icon.png");
+  background-repeat: no-repeat;
+  /* height: 40px; */
+  width: 120px;
+  /* width: 7%; */
+  background-size: 40px;
+  background-position: left;
+  text-align: right;
+  font-size: 18px;
+  color: blue;
+  background-color: transparent;
+  border: none;
+}
+
+.nroPag {
+  height: 30px;
+  width: 120px;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgb(78, 127, 232);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.btnNext {
+  cursor: pointer;
+  background-image: url("../../img/Actions-go-next-icon.png");
+  background-repeat: no-repeat;
+  /* height: 40px; */
+  width: 120px;
+  background-size: 40px;
+  background-position: right;
+  text-align: left;
+  font-size: 18px;
+  color: blue;
+  background-color: transparent;
+  border: none;
+}
+
+.btnPrev:hover, .btnNext:hover{
+  color:tomato;
+}
+
+.btnPrev:disabled, .btnNext:disabled{
+  background-image: none;
+  color: transparent;
+  cursor: none;
+  cursor:auto;
+}

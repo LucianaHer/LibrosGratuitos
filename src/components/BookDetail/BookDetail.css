@@ -1,0 +1,86 @@
+.all {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.imageDetail {
+  height: 70vh;
+  object-fit: contain;
+  padding: 2%;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid grey;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.data {
+  height: 81vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.titleBook {
+  padding-top: 2%;
+  font-family: cursive;
+}
+.autor {
+  color: green;
+  /* margin-top: 2%;
+  margin-bottom: 2%; */
+  padding-bottom: 1%;
+  padding-top: 2%;
+}
+.detalles {
+  width: 100%;
+  color: #404baf;
+  margin-top: 2%;
+  border-bottom: 1px solid gray;
+}
+.contentBook {
+  max-height: 35vh;
+  overflow-y: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.infoTitle {
+  text-decoration: underline;
+  width: 50px;
+  display: inline-block;
+}
+
+.categContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.categ {
+  color: blue;
+  font-size: 18px;
+  margin-top: 1%;
+  display: list-item;
+  list-style-type:disc;
+  list-style-position: inside;
+  margin-left: 10px;
+}
+
+.link {
+  color: green;
+  font-size: 20px;
+  margin-top: auto;
+}
+
+.volver {
+  width: 20%;
+  padding: 15px;
+  border: 2px solid #4a5299;
+  color: #4a5299;
+  align-self: center;
+  margin-top: 2%;
+  font-size: 18px;
+  font-weight: bold;
+}
