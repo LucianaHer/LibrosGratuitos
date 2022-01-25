@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch} from "react-redux";
 import "./Item.css";
 import { getBookDetail } from "../../actions";
+import bookError from '../../img/libroError.jpg'
 
 
 function Item({book}) {
@@ -17,7 +18,8 @@ function Item({book}) {
     <div className="item" onClick={handleBook} >
       <div className="title">{book.title}</div>
       <div className="image">
-        {<img src={book.cover} alt="" width="100%" />}
+        {<img src={book.cover}  loading="eager" width="100%" />}
+        
       </div>
       <div className="autor">{book.author}</div>
     </div>
