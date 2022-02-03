@@ -4,6 +4,7 @@ import { getBooks, getByCategory, query} from "../../actions";
 import Item from "../Item/Item";
 import Spinner from "../Spinner/Spinner.js";
 import BookDetail from "../BookDetail/BookDetail";
+import MenuCategories from "../MenuCategories/MenuCategories";
 import "./List.css";
 
 function List() {
@@ -72,58 +73,92 @@ function List() {
 
   return (
     <div className="divContainer">
-      {/*  renderiza: spiner, encabezado, items y botones paginación */ }
+      {/*  renderiza: spiner, encabezado, items y botones paginación */}
       {loading && <Spinner />}
-      {JSON.stringify(book) !== "{}" ? ( 
+      {JSON.stringify(book) !== "{}" ? (
         /* renderiza el libro seleccionado */
         <BookDetail book={book} />
-       ):(
-         /*  renderiza: encabezado, grid de libros y botones paginación */
-        <div className="structure"> 
-          {/* encabezado: leyenda de selección y botones lenguaje  */}
-          <div className="head"> 
-            <span>{subTitle}</span>
-            <div className="languagecontainer">
-              <button className={language==="english"? "languageButton activeLang" : "languageButton"} 
-                value="english" onClick={handleLanguage}>Ingles</button>
-              <button className={language==="spanish"? "languageButton activeLang" : "languageButton"} 
-                value="spanish" onClick={(e)=>handleLanguage(e)}>Español</button>
-              <button className={language==="all"? "languageButton activeLang" : "languageButton"} 
-                value="all" onClick={(e)=>handleLanguage(e)}>Todos</button>
+      ) : (
+        /*  structure: category select, encabezado, grid de libros y botones paginación */
+        <div className="structure">
+          {/* head: , categorias, leyenda de selección y botones lenguaje  */}
+          <div className="head">
+            <MenuCategories />
+            <div className="legend-language">
+              <div className="subtitle">{subTitle}</div>
+              <div className="languagecontainer">
+                <button
+                  className={
+                    language === "english"
+                      ? "languageButton activeLang"
+                      : "languageButton"
+                  }
+                  value="english"
+                  onClick={handleLanguage}
+                >
+                  Ingles
+                </button>
+                <button
+                  className={
+                    language === "spanish"
+                      ? "languageButton activeLang"
+                      : "languageButton"
+                  }
+                  value="spanish"
+                  onClick={(e) => handleLanguage(e)}
+                >
+                  Español
+                </button>
+                <button
+                  className={
+                    language === "all"
+                      ? "languageButton activeLang"
+                      : "languageButton"
+                  }
+                  value="all"
+                  onClick={(e) => handleLanguage(e)}
+                >
+                  Todos
+                </button>
+              </div>
             </div>
           </div>
           {/* renderiza un grid con los libros(10) */}
           <div className="grid">
             {books.map((item) => (
-              <Item
-                book={item}
-                key={item.ID}
-              />
+              <Item book={item} key={item.ID} />
             ))}
           </div>
           {/* renderiza botones de paginación */}
-          {!loading && !search && (
-            <div className="buttonCont">
-              <button
-                name="prev"
-                className="btnPrev"
-                disabled={prevButton}
-                onClick={prevPage}
+          {
+            /* !loading &&  */ !search && (
+              <div className="buttonCont">
+                <button
+                  name="prev"
+                  className="btnPrev"
+                  disabled={prevButton}
+                  onClick={prevPage}
                 >
-                Anterior
-              </button>
-              <p className="nroPag">Pag {pageNumber}</p>
-              <button
-                name="next"
-                className="btnNext"
-                disabled={nextButton}
-                onClick={nextPage}
+                  {/* Anterior */}
+                </button>
+                <div className="nroPag">
+                  {/* <p>Pag... </p> */}
+                  {!loading &&(
+                  <span>Pág. {pageNumber}</span>
+                  )}
+                </div>
+                <button
+                  name="next"
+                  className="btnNext"
+                  disabled={nextButton}
+                  onClick={nextPage}
                 >
-                Siguiente
-              </button>
-            </div>
-          )}
-          </div>
+                  {/* Siguiente */}
+                </button>
+              </div>
+            )
+          }
+        </div>
       )}
     </div>
   );

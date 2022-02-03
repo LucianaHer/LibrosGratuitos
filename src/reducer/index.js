@@ -48,7 +48,8 @@ function rootReducer(state = initialState, action) {
           books: action.payload,
           loading: action.load,
           search: action.search,
-          query: action.query
+          query: action.query,
+          bookDetail: action.bookDetail,
         };
       } else{
         alert("no encontrados");

@@ -21,7 +21,7 @@ function BookDetail({ book }) {
             <div className="titleBook">
               <h2>{book.title}</h2>
             </div>
-            <div className="autor">
+            <div className="autorBook">
               <h3>Autor/a: {book.author}</h3>
             </div>
             <div className="detalles">

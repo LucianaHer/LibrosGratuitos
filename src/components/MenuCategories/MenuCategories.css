@@ -1,57 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-.ul {
-  /* min-height: 70vh; */
-  min-width: 250px;
-  display: inline-block;
-  max-height: 91.5vh;
-  overflow-y: scroll;
-  list-style-type: none;
-  padding: 0 2px 0px 2px;
+
+select{
+  font-size: 1em;
+  padding: 0.5em 0.625em;
   background-color: #383e72;
-  font-family: "Raleway", sans-serif;
-  scrollbar-width: thin;
-  scrollbar-color: rgb(78, 127, 232) white;
+  color: white;
+  /* appearance: none; */
+  border: 0;
+  width: 11em;
+  position: relative;
+  /* width: 12.5em; */
 }
 
-.ul::-webkit-scrollbar {
-  width: 12px;
+.custom-select{
+ position: relative;
+ /* display: flex; */
+ width: 11em;
+ margin-bottom: 1em;
 }
-
-.ul::-webkit-scrollbar-track {
-  background: white;
+.custom-arrow{
+  position: absolute;
+  top:0;
+  right: 0;
+  display:inline;
+  background: #6c75c7;
+  height: 2.2em;
+  width: 2em;
+  pointer-events: none;
 }
-
-.ul::-webkit-scrollbar-thumb {
-  background-color: rgb(78, 127, 232);
-  border-radius: 20px;
+.custom-arrow::before,
+.custom-arrow::after{
+  --size: 0.35em;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left:50%;
+  transform: translate(-50%, -50%)
 }
-
-.liTitle {
+.custom-arrow::before{
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid white;
+  top:35%;
   
-  display: block;
-  color: white;
-  background-color: rgb(78, 127, 232);
-  padding: 8px 20px;
-  font-size: 20px;
-  font-weight: bold;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
 }
-
-.li {
-  display: block;
-  color: white;
-  padding: 8px 20px;
-  /* padding: 10px; */
-  text-decoration: none;
+.custom-arrow::after{
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid white;
+  top:65%;
 }
-
-.li:hover {
-  background-color: rgb(105, 128, 128);
-  color: white;
-  cursor: pointer;
+.options{
+  background-color: white;
+  color: #383e72;
+  font:bold;
 }
-
-

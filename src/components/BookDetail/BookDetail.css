@@ -4,53 +4,71 @@
   align-items: center;
 }
 .imageDetail {
-  height: 70vh;
+  /* border: 2px solid red; */
+  height: 40.625em;
   object-fit: contain;
-  padding: 2%;
+  padding: 2.1875em;
 }
 
 .rightSide {
   display: flex;
   flex-direction: column;
   border-left: 1px solid grey;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 1.5625em;
+  padding-right: 0.625em;
 }
 .data {
-  height: 81vh;
+  /* border: 2px solid red; */
+  height: 47.5em;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  
 }
 
 .titleBook {
-  padding-top: 2%;
+  /* border: 2px solid red; */
+  padding-top: 1em;
+  padding-bottom: 2em;
   font-family: cursive;
 }
-.autor {
+.autorBook {
+  /* border: 2px solid red; */
   color: green;
-  /* margin-top: 2%;
-  margin-bottom: 2%; */
-  padding-bottom: 1%;
-  padding-top: 2%;
+  padding-bottom: 1.25em;
 }
 .detalles {
+  /* border: 2px solid red; */
   width: 100%;
   color: #404baf;
-  margin-top: 2%;
+  margin-top: 1.25em;
   border-bottom: 1px solid gray;
 }
 .contentBook {
-  max-height: 35vh;
+  
+  max-height: 18.75em;
+  padding-top: 0.625em;
   overflow-y: auto;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(143, 145, 153) white;
 }
+.contentBook::-webkit-scrollbar {
+  width: 0.625em;
+}
+
+.contentBook::-webkit-scrollbar-track {
+  background: white;
+}
+
+.contentBook::-webkit-scrollbar-thumb {
+  background-color: rgb(143, 145, 153);
+}
+
 
 .infoTitle {
   text-decoration: underline;
-  width: 50px;
+  width: 3.125em;
   display: inline-block;
+  padding-right: 0.9375em;
 }
 
 .categContainer {
@@ -60,27 +78,27 @@
 }
 .categ {
   color: blue;
-  font-size: 18px;
-  margin-top: 1%;
+  font-size: 1.125em;
+  margin-top: 0.3125em;
   display: list-item;
   list-style-type:disc;
   list-style-position: inside;
-  margin-left: 10px;
+  margin-left: 0.9375em;
 }
 
 .link {
   color: green;
-  font-size: 20px;
+  font-size: 1.25em;
   margin-top: auto;
 }
 
 .volver {
-  width: 20%;
-  padding: 15px;
+  width: auto;
+  padding: 0.9375em;
   border: 2px solid #4a5299;
   color: #4a5299;
   align-self: center;
-  margin-top: 2%;
-  font-size: 18px;
+  margin-top: auto;
+  font-size: 1.125em;
   font-weight: bold;
 }

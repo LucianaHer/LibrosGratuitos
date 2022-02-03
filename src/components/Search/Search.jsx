@@ -11,7 +11,7 @@ function Search() {
     e.preventDefault();
     setBook(e.target.value);
   }
-  
+
   //busqueda parcial por nombre del libro o autor
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,9 +19,8 @@ function Search() {
     dispatch(searchBook(book));
     setBook("");
   }
-  
 
-  //"Todos" botón, resetea las paginas y trae todos los libros, 
+  //"Todos" botón, resetea las paginas y trae todos los libros,
   function handleAll() {
     dispatch(query(true));
     dispatch(getBooks(0, 1, "all"));
@@ -37,15 +36,11 @@ function Search() {
           value={book}
           onChange={(e) => handleInputChange(e)}
         />
-        <input
-          className="buttonSearch"
-          type="submit"
-          value="Buscar"
-        />
+        <input className="buttonSearch" type="submit" value="Buscar" />
       </form>
-        <button className="buttonSearch" onClick={() => handleAll()}>
-          Todos
-        </button>
+      <button className="buttonSearch" onClick={() => handleAll()}>
+        Todos
+      </button>
     </div>
   );
 }

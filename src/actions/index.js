@@ -51,6 +51,7 @@ export function searchBook(query) {
           load: false,
           search: true,
           query: query,
+          bookDetail: {},
         });
       } else {
         var json2 = await axios.get(
@@ -63,6 +64,7 @@ export function searchBook(query) {
           load: false,
           search: true,
           query: query,
+          bookDetail: {},
         });
       }
     } catch (error) {

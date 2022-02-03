@@ -1,19 +1,17 @@
 import React, { lazy, Suspense } from "react";
 import "./Home.css";
 import Menu from "../Menu/Menu";
-import MenuCategories from "../MenuCategories/MenuCategories";
+
 import Spinner from "../Spinner/Spinner.js";
 const List = lazy(() => import("../List/List"));
 
 function Home() {
   return (
-    <div >
+    <div className="home">
       <Menu />
       <Suspense fallback={<Spinner />}>
-        <div className="space">
-          <MenuCategories />
-          <List className="lista" />
-        </div>
+        <List />
+        {/* <footer>Hola</footer> */}
       </Suspense>
     </div>
   );
