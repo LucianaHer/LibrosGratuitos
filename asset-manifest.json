@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/LibrosGratuitos/static/css/main.3116bbf7.chunk.css",
-    "main.js": "/LibrosGratuitos/static/js/main.3ec89da3.chunk.js",
-    "main.js.map": "/LibrosGratuitos/static/js/main.3ec89da3.chunk.js.map",
-    "runtime-main.js": "/LibrosGratuitos/static/js/runtime-main.0acc5fff.js",
-    "runtime-main.js.map": "/LibrosGratuitos/static/js/runtime-main.0acc5fff.js.map",
-    "static/js/2.65fcd217.chunk.js": "/LibrosGratuitos/static/js/2.65fcd217.chunk.js",
-    "static/js/2.65fcd217.chunk.js.map": "/LibrosGratuitos/static/js/2.65fcd217.chunk.js.map",
+    "main.css": "/LibrosGratuitos/static/css/main.75e84fa0.chunk.css",
+    "main.js": "/LibrosGratuitos/static/js/main.c3ad424d.chunk.js",
+    "main.js.map": "/LibrosGratuitos/static/js/main.c3ad424d.chunk.js.map",
+    "runtime-main.js": "/LibrosGratuitos/static/js/runtime-main.ccfae5ab.js",
+    "runtime-main.js.map": "/LibrosGratuitos/static/js/runtime-main.ccfae5ab.js.map",
+    "static/js/2.13d70283.chunk.js": "/LibrosGratuitos/static/js/2.13d70283.chunk.js",
+    "static/js/2.13d70283.chunk.js.map": "/LibrosGratuitos/static/js/2.13d70283.chunk.js.map",
     "static/css/3.1e70d7e0.chunk.css": "/LibrosGratuitos/static/css/3.1e70d7e0.chunk.css",
-    "static/js/3.563c8157.chunk.js": "/LibrosGratuitos/static/js/3.563c8157.chunk.js",
-    "static/js/3.563c8157.chunk.js.map": "/LibrosGratuitos/static/js/3.563c8157.chunk.js.map",
+    "static/js/3.ca551dc6.chunk.js": "/LibrosGratuitos/static/js/3.ca551dc6.chunk.js",
+    "static/js/3.ca551dc6.chunk.js.map": "/LibrosGratuitos/static/js/3.ca551dc6.chunk.js.map",
     "index.html": "/LibrosGratuitos/index.html",
     "static/css/3.1e70d7e0.chunk.css.map": "/LibrosGratuitos/static/css/3.1e70d7e0.chunk.css.map",
-    "static/css/main.3116bbf7.chunk.css.map": "/LibrosGratuitos/static/css/main.3116bbf7.chunk.css.map",
-    "static/js/2.65fcd217.chunk.js.LICENSE.txt": "/LibrosGratuitos/static/js/2.65fcd217.chunk.js.LICENSE.txt",
+    "static/css/main.75e84fa0.chunk.css.map": "/LibrosGratuitos/static/css/main.75e84fa0.chunk.css.map",
+    "static/js/2.13d70283.chunk.js.LICENSE.txt": "/LibrosGratuitos/static/js/2.13d70283.chunk.js.LICENSE.txt",
     "static/media/List.css": "/LibrosGratuitos/static/media/Actions-go-previous-icon.cc850481.png",
     "static/media/libro1.f4e529df.gif": "/LibrosGratuitos/static/media/libro1.f4e529df.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.0acc5fff.js",
-    "static/js/2.65fcd217.chunk.js",
-    "static/css/main.3116bbf7.chunk.css",
-    "static/js/main.3ec89da3.chunk.js"
+    "static/js/runtime-main.ccfae5ab.js",
+    "static/js/2.13d70283.chunk.js",
+    "static/css/main.75e84fa0.chunk.css",
+    "static/js/main.c3ad424d.chunk.js"
   ]
 }
