@@ -50,6 +50,7 @@
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgb(143, 145, 153) white;
+  line-height :1.6em;
 }
 .contentBook::-webkit-scrollbar {
   width: 0.625em;

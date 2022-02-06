@@ -36,6 +36,7 @@
 
 .subtitle{
   padding: 5px;
+  margin-left: 15px;
   color: #3d4bca;
 }
 
@@ -70,6 +71,7 @@
   /* border: 2px solid red; */
   margin: 0 auto;
   width: 95%;
+  height: 41.25em;
   display: grid;
   grid-template-columns: repeat(auto-fit, 19.375em);
   row-gap: 1.25em;
@@ -85,11 +87,16 @@
 .buttonCont {
   /* border: 2px solid red; */
   display: flex;
-  /* width: 31.25em; */
+  width: 31.25em;
   height: 3.125em;
   /* margin-top: 1.5625em; */
   justify-content:center;
-  
+  justify-items: stretch;
+  /* display:none; */
+}
+
+.ocult{
+  visibility: hidden;
 }
 
 .btnPrev {
@@ -111,14 +118,14 @@
   justify-content: center;
   width: 4.25em;
   /* text-align: center; */
-  font-size: 1.25em;
+  font-size: 1.125em;
   background-color: #6c75c7;
   color: white;
   border: none;
   border-radius: 10px;
   padding: 0.5em;
-  margin-left: 2%;
-  margin-right: 2%;
+  /* margin-left: 2%;
+  margin-right: 2%; */
 }
 
 .btnNext {
@@ -154,5 +161,10 @@
   }
   .legend-language{
     width: 100%;
+  }
+}
+@media (max-width: 1630px) {
+  .grid {
+    height:auto;    
   }
 }

@@ -11,13 +11,16 @@ select{
   width: 11em;
   position: relative;
   /* width: 12.5em; */
+  border: none;
 }
 
 .custom-select{
  position: relative;
  /* display: flex; */
  width: 11em;
- margin-bottom: 1em;
+ /* margin-bottom: 1em; */
+ margin-left: 1%;
+ border: none;
 }
 .custom-arrow{
   position: absolute;
@@ -56,4 +59,5 @@ select{
   background-color: white;
   color: #383e72;
   font:bold;
+  border: none;
 }

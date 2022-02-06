@@ -1,8 +1,8 @@
 .item {
   /* border: 2px solid blue; */
   padding-bottom: 5px;
-  width: 15.625em;
-  height: 22.5em;
+  width: 13.625em;
+  height: 19.5em;
   /* background-color: rgb(187, 200, 214); */
   background-color: whitesmoke;
   display: flex;
@@ -21,16 +21,17 @@ box-shadow: 0.8125rem 0.75rem 0.8125rem 0rem rgba(0,0,0,0.46);
 }
 
 .image img {
-  height: 17.8em;
+  height: 15.8em;
+  width: 12.625em;
   /* width: 12.5em; */
   /* width: 14.625em; */
-  object-fit:cover;
+  object-fit:fill;
 }
 
 .item .title {
-  width: 15rem;
+  width: 11.625em;;
   font-weight: bold;
-  font-size: 1.125em;
+  font-size: 1em; 
   color: rgb(12, 12, 133);
   text-overflow: ellipsis;
   white-space: pre-wrap;
@@ -46,7 +47,7 @@ box-shadow: 0.8125rem 0.75rem 0.8125rem 0rem rgba(0,0,0,0.46);
 
 .autor {
   width: 12.5em;
-  font-size: 1em;
+  font-size: 0.9em;
   text-overflow: ellipsis;
   white-space:pre-wrap;
   overflow: hidden;

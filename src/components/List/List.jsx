@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getBooks, getByCategory, query} from "../../actions";
+import { getBooks, getByCategory, query } from "../../actions";
 import Item from "../Item/Item";
 import Spinner from "../Spinner/Spinner.js";
 import BookDetail from "../BookDetail/BookDetail";
@@ -17,19 +17,19 @@ function List() {
 
   //constantes obtenidas del State de redux
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);    //libros del State de redux
-  const loading = useSelector((state) => state.loading);// true o false (si se esta cargando el State)
-  const search = useSelector((state) => state.search);  // true o false (si esta activa la busqueda)
+  const books = useSelector((state) => state.books); //libros del State de redux
+  const loading = useSelector((state) => state.loading); // true o false (si se esta cargando el State)
+  const search = useSelector((state) => state.search); // true o false (si esta activa la busqueda)
   const busqueda = useSelector((state) => state.query); //string, la busqueda ingresada
-  const pag = useSelector((state) => state.page);       //rango de libros en el State redux
-  const nroPag = useSelector((state) => state.numberPage);//nro pag en el State de redux
-  const cat = useSelector((state) => state.categ);      // true o false (si se seleccionó una categoría)
-  const catId = useSelector((state) => state.idCateg);  //id de la categ seleccionada
-  const catName = useSelector((state) => state.categName);//Nombre de la categoría seleccionada
-  const book = useSelector((state) => state.bookDetail);  //libro cliqueado para mostrar componente BookDetail
-  const language = useSelector((state) => state.language);// lenguaje seleccionado
+  const pag = useSelector((state) => state.page); //rango de libros en el State redux
+  const nroPag = useSelector((state) => state.numberPage); //nro pag en el State de redux
+  const cat = useSelector((state) => state.categ); // true o false (si se seleccionó una categoría)
+  const catId = useSelector((state) => state.idCateg); //id de la categ seleccionada
+  const catName = useSelector((state) => state.categName); //Nombre de la categoría seleccionada
+  const book = useSelector((state) => state.bookDetail); //libro cliqueado para mostrar componente BookDetail
+  const language = useSelector((state) => state.language); // lenguaje seleccionado
 
- // se dispara al cambiar pag sgte o anterior, o al cambiar de lenguaje
+  // se dispara al cambiar pag sgte o anterior, o al cambiar de lenguaje
   useEffect(() => {
     dispatch(query(true));
     if (!cat) {
@@ -38,7 +38,6 @@ function List() {
       dispatch(getByCategory(catId, catName, pageRange, pageNumber, lang));
     }
   }, [pageRange, lang]);
-
 
   //se dispara al cambiar el State de libros, es para mostrar el mje de que se esta mostrando (todos, busqueda o categoria)
   useEffect(() => {
@@ -64,10 +63,10 @@ function List() {
       setPageNumber(nroPag - 1);
       setPageRange(pag - 10);
     } else alert("no hay libros anteriores");
-  }
- 
+  };
+
   //funcion al presionar botones de lenguaje de libros
-  function handleLanguage(e){
+  function handleLanguage(e) {
     setLang(e.target.value);
   }
 
@@ -130,31 +129,26 @@ function List() {
             ))}
           </div>
           {/* renderiza botones de paginación */}
-          {
-            /* !loading &&  */ !search && (
-              <div className="buttonCont">
+          {!search && (
+              <div className={
+                !loading 
+                  ? "buttonCont" : "ocult"
+                  }>
                 <button
                   name="prev"
                   className="btnPrev"
                   disabled={prevButton}
                   onClick={prevPage}
-                >
-                  {/* Anterior */}
-                </button>
+                />
                 <div className="nroPag">
-                  {/* <p>Pag... </p> */}
-                  {!loading &&(
-                  <span>Pág. {pageNumber}</span>
-                  )}
+                 Pág. {pageNumber}
                 </div>
                 <button
                   name="next"
                   className="btnNext"
                   disabled={nextButton}
                   onClick={nextPage}
-                >
-                  {/* Siguiente */}
-                </button>
+                />
               </div>
             )
           }
