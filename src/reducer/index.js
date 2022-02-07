@@ -42,7 +42,8 @@ function rootReducer(state = initialState, action) {
       }
 
     case "SEARCH-BOOK":
-      if (action.payload.length > 0) {
+      if (action.payload) {
+        
         return {
           ...state,
           books: action.payload,
@@ -50,6 +51,8 @@ function rootReducer(state = initialState, action) {
           search: action.search,
           query: action.query,
           bookDetail: action.bookDetail,
+          page: action.pagina,
+          numberPage: action.nroPag,
         };
       } else{
         alert("no encontrados");

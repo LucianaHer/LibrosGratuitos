@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 //accion para setear en true loading del state
 export function query(load) {
   return {
@@ -36,14 +35,31 @@ export function getBooks(page, pageNumber, lang) {
   };
 }
 
-
 //acción que busca en la api Open Libra una palabra, por titulo o por autor
-export function searchBook(query) {
+export function searchBook(query, page, pageNumber) {
+  console.log("QUERY: ", query);
+  console.log("RANGO: ", page)
   return async function (dispatch) {
     try {
       var json = await axios.get(
-        `https://www.etnassoft.com/api/v1/get/?book_title=${query}`
+        `https://www.etnassoft.com/api/v1/get/?book_title=${query}&results_range=${page}`
       );
+      // var json2 = await axios.get(
+      //   `https://www.etnassoft.com/api/v1/get/?book_author=${query}`
+      // );
+      // const arrayC = [...new Set( [...json.data, ...json2.data] )];
+      // console.log("ARRAY C: ",arrayC)
+      // if(arrayC.length >0){
+      //   return dispatch({
+      //     type: "SEARCH-BOOK",
+      //     payload: arrayC,
+      //     load: false,
+      //     search: true,
+      //     query: query,
+      //     bookDetail: {},
+      //   });
+      // }
+
       if (json.data.length > 0) {
         return dispatch({
           type: "SEARCH-BOOK",
@@ -52,12 +68,14 @@ export function searchBook(query) {
           search: true,
           query: query,
           bookDetail: {},
+          pagina: page,
+          nroPag: pageNumber,
         });
       } else {
         var json2 = await axios.get(
-          `https://www.etnassoft.com/api/v1/get/?book_author=${query}`
+          `https://www.etnassoft.com/api/v1/get/?book_author=${query}&results_range=${page}`
         );
-
+        
         return dispatch({
           type: "SEARCH-BOOK",
           payload: json2.data,
@@ -65,13 +83,17 @@ export function searchBook(query) {
           search: true,
           query: query,
           bookDetail: {},
+          pagina: page,
+          nroPag: pageNumber,
         });
+  
       }
     } catch (error) {
       console.log("No se pudo obtener la query", error);
     }
   };
 }
+
 
 //acción para obtener todas las categorias de la api Open Libra
 export function getCategories() {

@@ -16,7 +16,7 @@ function Search() {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(query(true));
-    dispatch(searchBook(book));
+    dispatch(searchBook(book, 0, 1));
     setBook("");
   }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getBooks, getByCategory, query } from "../../actions";
+import { getBooks, getByCategory, query, searchBook } from "../../actions";
 import Item from "../Item/Item";
 import Spinner from "../Spinner/Spinner.js";
 import BookDetail from "../BookDetail/BookDetail";
@@ -32,10 +32,12 @@ function List() {
   // se dispara al cambiar pag sgte o anterior, o al cambiar de lenguaje
   useEffect(() => {
     dispatch(query(true));
-    if (!cat) {
+    if (!cat && !search) {
       dispatch(getBooks(pageRange, pageNumber, lang));
-    } else {
+    } else if (cat) {
       dispatch(getByCategory(catId, catName, pageRange, pageNumber, lang));
+    } else {
+      dispatch(searchBook(busqueda, pageRange, pageNumber));
     }
   }, [pageRange, lang]);
 
@@ -62,7 +64,7 @@ function List() {
     if (pageRange >= 10) {
       setPageNumber(nroPag - 1);
       setPageRange(pag - 10);
-    } else alert("no hay libros anteriores");
+    } 
   };
 
   //funcion al presionar botones de lenguaje de libros
@@ -117,41 +119,37 @@ function List() {
                   value="all"
                   onClick={(e) => handleLanguage(e)}
                 >
-                  Todos
+                  Ambos
                 </button>
               </div>
             </div>
           </div>
           {/* renderiza un grid con los libros(10) */}
+          {books.length > 0 ? (
           <div className="grid">
             {books.map((item) => (
               <Item book={item} key={item.ID} />
             ))}
           </div>
+          ) : <div  className={!loading? "grid" : "ocult"}>No hay mas libros</div>}
           {/* renderiza botones de paginación */}
-          {!search && (
-              <div className={
-                !loading 
-                  ? "buttonCont" : "ocult"
-                  }>
-                <button
-                  name="prev"
-                  className="btnPrev"
-                  disabled={prevButton}
-                  onClick={prevPage}
-                />
-                <div className="nroPag">
-                 Pág. {pageNumber}
-                </div>
-                <button
-                  name="next"
-                  className="btnNext"
-                  disabled={nextButton}
-                  onClick={nextPage}
-                />
-              </div>
-            )
-          }
+          <div className={!loading ? "buttonCont" : "ocult"}>
+            <button
+              name="prev"
+              className="btnPrev"
+              disabled={prevButton}
+              onClick={prevPage}
+            />
+            <div className="nroPag">Pág. {pageNumber}</div>
+           
+              <button 
+                name="next"
+                className="btnNext"
+                disabled={nextButton}
+                onClick={nextPage}
+              />
+            
+          </div>
         </div>
       )}
     </div>
