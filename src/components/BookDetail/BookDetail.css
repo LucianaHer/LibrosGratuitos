@@ -135,7 +135,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  .contentBook {
+  .contentBook .titleBook {
     font-size: 0.75em;
   }
 }
