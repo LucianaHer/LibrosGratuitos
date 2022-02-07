@@ -1,16 +1,25 @@
 .all {
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* height: 45.25em; */
 }
+
 .imageDetail {
   /* border: 2px solid red; */
-  height: 40.625em;
-  object-fit: contain;
+  height: 35.625em;
+  width:auto;
+  object-fit: fill;
   padding: 2.1875em;
+  /* width: 30%; */
+ 
 }
 
 .rightSide {
+  /* border: 2px solid red; */
+  height: 49.375em;
+  /* width: 70%; */
   display: flex;
   flex-direction: column;
   border-left: 1px solid grey;
@@ -78,19 +87,22 @@
   justify-content: flex-start;
 }
 .categ {
-  color: blue;
+  color: white;
+  background-color:#404baf ;
   font-size: 1.125em;
   margin-top: 0.3125em;
-  display: list-item;
-  list-style-type:disc;
-  list-style-position: inside;
-  margin-left: 0.9375em;
+  padding: 5px;
+  /* display: list-item; */
+  /* list-style-type:disc;
+  list-style-position: inside; */
+
 }
 
 .link {
   color: green;
-  font-size: 1.25em;
+  font-size: 1.1em;
   margin-top: auto;
+  padding-bottom: 1.25em;
 }
 
 .volver {
@@ -99,7 +111,20 @@
   border: 2px solid #4a5299;
   color: #4a5299;
   align-self: center;
-  margin-top: auto;
+  /* margin-top: 1%; */
   font-size: 1.125em;
   font-weight: bold;
+}
+
+
+@media (max-width: 700px) {
+  .all {
+    flex-direction: column;    
+  }
+  .imageDetail {
+    padding:5px;
+  }
+  .rightSide{
+    border:none;
+  }
 }

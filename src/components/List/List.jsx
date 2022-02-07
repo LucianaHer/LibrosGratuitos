@@ -64,7 +64,7 @@ function List() {
     if (pageRange >= 10) {
       setPageNumber(nroPag - 1);
       setPageRange(pag - 10);
-    } 
+    }
   };
 
   //funcion al presionar botones de lenguaje de libros
@@ -126,12 +126,14 @@ function List() {
           </div>
           {/* renderiza un grid con los libros(10) */}
           {books.length > 0 ? (
-          <div className="grid">
-            {books.map((item) => (
-              <Item book={item} key={item.ID} />
-            ))}
-          </div>
-          ) : <div  className={!loading? "grid" : "ocult"}>No hay mas libros</div>}
+            <div className="grid">
+              {books.map((item) => (
+                <Item book={item} key={item.ID} />
+              ))}
+            </div>
+          ) : (
+            <div className={!loading ? "grid" : "ocult"}>No hay mas libros</div>
+          )}
           {/* renderiza botones de paginación */}
           <div className={!loading ? "buttonCont" : "ocult"}>
             <button
@@ -141,14 +143,13 @@ function List() {
               onClick={prevPage}
             />
             <div className="nroPag">Pág. {pageNumber}</div>
-           
-              <button 
-                name="next"
-                className="btnNext"
-                disabled={nextButton}
-                onClick={nextPage}
-              />
-            
+
+            <button
+              name="next"
+              className="btnNext"
+              disabled={nextButton}
+              onClick={nextPage}
+            />
           </div>
         </div>
       )}
