@@ -27,8 +27,8 @@
   padding-right: 0.625em;
 }
 .data {
-  /* border: 2px solid red; */
-  height: 47.5em;
+  border: 2px solid red;
+  height: 50.5em;
   display: flex;
   flex-direction: column;
   
@@ -103,8 +103,9 @@
 .link {
   color: green;
   font-size: 1.1em;
-  margin-top: auto;
+  /* margin-top: auto; */
   padding-bottom: 1.25em;
+  margin-top: 25px;
 }
 
 .volver {
@@ -130,13 +131,16 @@
   }
   .rightSide{
     border:none;
+    height:auto;
   }
  
 }
 
 @media screen and (max-width: 576px) {
-  .contentBook .titleBook {
-    font-size: 0.75em;
-    font-family:'Times New Roman', Times, serif;
+  .contentBook  {
+    font-size: 0.75rem;
+  }
+  .titleBook{
+    font-size: 0.6rem;
   }
 }
