@@ -119,10 +119,12 @@
 
 @media (max-width: 700px) {
   .all {
-    flex-direction: column;    
+    flex-direction: column;  
+    justify-content: center;  
   }
   .imageDetail {
     padding:5px;
+    width:auto;
   }
   .rightSide{
     border:none;
