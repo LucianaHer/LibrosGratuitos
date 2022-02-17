@@ -53,7 +53,8 @@ function BookDetail({ book }) {
             ))}
           </div>
           <div className="link">
-            <a className="link" href={book.url_download} target="">Enlace a Open Libra para abrir/descargar PDF</a>
+            <a className="link" href={book.url_download} target="_blank" rel="noopener noreferrer">
+              Enlace a Open Libra para abrir/descargar PDF</a>
           </div>
           <button className="volver" onClick={volver}>VOLVER</button>
         </div>
