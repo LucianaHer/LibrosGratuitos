@@ -25,8 +25,8 @@ npm install
 npm start
 ```
 ## Desarrollo
-- La app esta desarrollada en JavaScripty ReactJS, con manejo de estados locales y globales a traves de Redux.
-- El diseño se hizo con clases CSS, y es totalmente responsive, adaptable a cualquier dispositivo.-
+- La app esta desarrollada en JavaScripty ReactJS, con manejo de estados locales React y globales a traves de Redux.
+- El diseño se hizo con clases CSS, Grid y Flexbox y es totalmente responsive, adaptable a cualquier dispositivo.-
 
 
 Todo feedback es bienvenido!
