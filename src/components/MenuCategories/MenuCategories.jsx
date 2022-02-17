@@ -29,13 +29,11 @@ function MenuCategories() {
     <div className="custom-select">
       <div>
         <select
-          className="selectItems"
           id="categs"
+          className="selectItems"
           onChange={(event) => handleCat(event)}
         >
-          <option /* className="options" */ value=" " key={100}>
-            CATEGORIAS
-          </option>
+          <option value=" " key={100}>CATEGORIAS</option>
           {categories.map((cat) => (
             <option
               className="options"

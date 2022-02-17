@@ -1,10 +1,9 @@
 .divContainer {
-  /* border: 2px solid red; */
   width: 100%;
   margin: 0 auto;
 }
+
 .structure{
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -12,12 +11,8 @@
 }
 
 .head {
-  /* border: 2px solid red; */
   width: 100%;
   font-size: 1.25em;
-  /* color: blue; */
-  
-  /* margin-top: 0.93em; */
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -27,9 +22,7 @@
 .legend-language{
   width: 85%;
   display: flex;
-  /* padding-left: 3%; */
   margin-top: 0.4em;
-  /* margin-right: 1.4em; */
   align-items:flex-start;
   justify-content: space-between;
 }
@@ -52,7 +45,6 @@
   padding: 5px;
   text-align: center;
   font-weight: bold;
-  /* border-radius: 10px; */
   background-color: whitesmoke;
   margin-left: 0.625em;
 }
@@ -63,12 +55,11 @@
   color: white;
 }
 .languageButton:hover, .activeLang:hover {
-  background-color: #619ac8;
+  background-color: rgb(221, 86, 86);
   color: white;
 }
 
 .grid {
-  /* border: 2px solid red; */
   margin: 0 auto;
   width: 95%;
   height: 41.25em;
@@ -79,20 +70,16 @@
   justify-content: space-evenly;
   align-items: stretch;
   align-content: center;
-  padding-bottom: 20px;
-  
+  padding-bottom: 1.25em;
 }
 
 
 .buttonCont {
-  /* border: 2px solid red; */
   display: flex;
   width: 31.25em;
   height: 3.125em;
-  /* margin-top: 1.5625em; */
   justify-content:center;
   justify-items: stretch;
-  /* display:none; */
 }
 
 .ocult{
@@ -117,22 +104,18 @@
   display:flex;
   justify-content: center;
   width: 4.25em;
-  /* text-align: center; */
   font-size: 1.125em;
   background-color: #6c75c7;
   color: white;
   border: none;
   border-radius: 10px;
   padding: 0.5em;
-  /* margin-left: 2%;
-  margin-right: 2%; */
 }
 
 .btnNext {
   cursor: pointer;
   background-image: url("../../img/Actions-go-next-icon.png");
   background-repeat: no-repeat;
-  /* height: 40px; */
   width: 7.5em;
   background-size: 2.5em;
   background-position: right;

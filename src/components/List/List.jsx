@@ -8,6 +8,9 @@ import MenuCategories from "../MenuCategories/MenuCategories";
 import "./List.css";
 
 function List() {
+  const dispatch = useDispatch();
+  
+  // estados locales
   const [pageRange, setPageRange] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   const [subTitle, setSubTitle] = useState("");
@@ -15,8 +18,8 @@ function List() {
   const [prevButton, setPrevButton] = useState(false);
   const [nextButton, setNextButton] = useState(false);
 
+
   //constantes obtenidas del State de redux
-  const dispatch = useDispatch();
   const books = useSelector((state) => state.books); //libros del State de redux
   const loading = useSelector((state) => state.loading); // true o false (si se esta cargando el State)
   const search = useSelector((state) => state.search); // true o false (si esta activa la busqueda)
@@ -41,7 +44,7 @@ function List() {
     }
   }, [pageRange, lang]);
 
-  //se dispara al cambiar el State de libros, es para mostrar el mje de que se esta mostrando (todos, busqueda o categoria)
+  //se dispara al cambiar el State de libros, es para mostrar leyenda de qué se esta mostrando (todos, busqueda o categoria)
   useEffect(() => {
     setPageNumber(nroPag);
     if (cat) setSubTitle("Categoría: " + catName);
@@ -73,57 +76,40 @@ function List() {
   }
 
   return (
-    <div className="divContainer">
-      {/*  renderiza: spiner, encabezado, items y botones paginación */}
+    <div className="divContainer">{/*  renderiza: spiner, encabezado, items y botones paginación */}
       {loading && <Spinner />}
       {JSON.stringify(book) !== "{}" ? (
-        /* renderiza el libro seleccionado */
-        <BookDetail book={book} />
+        <BookDetail book={book} />/* renderiza el libro seleccionado */
       ) : (
-        /*  structure: category select, encabezado, grid de libros y botones paginación */
-        <div className="structure">
-          {/* head: , categorias, leyenda de selección y botones lenguaje  */}
-          <div className="head">
+        
+        <div className="structure">{/* structure: category select, encabezado, grid de libros y botones paginación */}
+          
+          <div className="head">{/* head: , categorias, leyenda de selección y botones lenguaje  */}
             <MenuCategories />
             <div className="legend-language">
               <div className="subtitle">{subTitle}</div>
               <div className="languagecontainer">
                 <button
-                  className={
-                    language === "english"
-                      ? "languageButton activeLang"
-                      : "languageButton"
-                  }
+                  className={language === "english" ? "languageButton activeLang" : "languageButton"}
                   value="english"
                   onClick={handleLanguage}
-                >
-                  Ingles
-                </button>
+                >Ingles</button>
+
                 <button
-                  className={
-                    language === "spanish"
-                      ? "languageButton activeLang"
-                      : "languageButton"
-                  }
+                  className={language === "spanish" ? "languageButton activeLang" : "languageButton"}
                   value="spanish"
                   onClick={(e) => handleLanguage(e)}
-                >
-                  Español
-                </button>
+                >Español</button>
+
                 <button
-                  className={
-                    language === "all"
-                      ? "languageButton activeLang"
-                      : "languageButton"
-                  }
+                  className={language === "all" ? "languageButton activeLang" : "languageButton"}
                   value="all"
                   onClick={(e) => handleLanguage(e)}
-                >
-                  Ambos
-                </button>
+                >Ambos</button>
               </div>
             </div>
           </div>
+
           {/* renderiza un grid con los libros(10) */}
           {books.length > 0 ? (
             <div className="grid">
@@ -134,6 +120,7 @@ function List() {
           ) : (
             <div className={!loading ? "grid" : "ocult"}>No hay mas libros</div>
           )}
+
           {/* renderiza botones de paginación */}
           <div className={!loading ? "buttonCont" : "ocult"}>
             <button

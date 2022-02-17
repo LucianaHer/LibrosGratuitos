@@ -44,22 +44,6 @@ export function searchBook(query, page, pageNumber) {
       var json = await axios.get(
         `https://www.etnassoft.com/api/v1/get/?book_title=${query}&results_range=${page}`
       );
-      // var json2 = await axios.get(
-      //   `https://www.etnassoft.com/api/v1/get/?book_author=${query}`
-      // );
-      // const arrayC = [...new Set( [...json.data, ...json2.data] )];
-      // console.log("ARRAY C: ",arrayC)
-      // if(arrayC.length >0){
-      //   return dispatch({
-      //     type: "SEARCH-BOOK",
-      //     payload: arrayC,
-      //     load: false,
-      //     search: true,
-      //     query: query,
-      //     bookDetail: {},
-      //   });
-      // }
-
       if (json.data.length > 0) {
         return dispatch({
           type: "SEARCH-BOOK",
@@ -75,7 +59,6 @@ export function searchBook(query, page, pageNumber) {
         var json2 = await axios.get(
           `https://www.etnassoft.com/api/v1/get/?book_author=${query}&results_range=${page}`
         );
-        
         return dispatch({
           type: "SEARCH-BOOK",
           payload: json2.data,
@@ -154,7 +137,7 @@ export function exitDetail() {
   };
 }
 
-//accion para cambiar el lenguaje de libros en el Stste de redux
+//accion para cambiar el lenguaje de libros en el State de redux
 export function changeLanguage(lang) {
   return {
     type: "CHANGE-LANGUAGE",

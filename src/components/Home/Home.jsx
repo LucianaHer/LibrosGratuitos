@@ -11,7 +11,6 @@ function Home() {
       <Menu />
       <Suspense fallback={<Spinner />}>
         <List />
-        {/* <footer>Hola</footer> */}
       </Suspense>
     </div>
   );

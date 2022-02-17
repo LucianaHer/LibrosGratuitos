@@ -6,22 +6,19 @@ select{
   padding: 0.5em 0.625em;
   background-color: #383e72;
   color: white;
-  /* appearance: none; */
   border: 0;
   width: 11em;
   position: relative;
-  /* width: 12.5em; */
   border: none;
 }
 
 .custom-select{
  position: relative;
- /* display: flex; */
  width: 11em;
- /* margin-bottom: 1em; */
  margin-left: 1%;
  border: none;
 }
+
 .custom-arrow{
   position: absolute;
   top:0;

@@ -16,8 +16,7 @@ function Item({book}) {
   return (
     <div className="item" onClick={handleBook} >
       <div className="image">
-        {<img src={book.cover} alt=" " loading="eager" width="100%" />}
-        
+        {<img src={book.cover} alt=" " width="100%" />}  
       </div>
       <div className="title">{book.title}</div>
       <div className="autor">{book.author}</div>

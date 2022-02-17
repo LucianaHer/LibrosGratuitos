@@ -23,7 +23,6 @@ function rootReducer(state = initialState, action) {
 
     case "GET-BOOKS":
       let array = action.payload;
-
       if (array) {
         return {
           ...state,
@@ -43,7 +42,6 @@ function rootReducer(state = initialState, action) {
 
     case "SEARCH-BOOK":
       if (action.payload) {
-        
         return {
           ...state,
           books: action.payload,
@@ -55,11 +53,11 @@ function rootReducer(state = initialState, action) {
           numberPage: action.nroPag,
         };
       } else{
-        alert("no encontrados");
-        return {
-          ...state,
-          loading: action.load,
-        };
+          alert("no encontrados");
+          return {
+            ...state,
+            loading: action.load,
+          };
       } 
 
     case "GET-CATEGORIES":

@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import "./BookDetail.css";
 import { exitDetail } from "../../actions";
-import normalUTF8 from "../componentsFunctions/components-functions.js";
+import normalUTF8 from "./detailFunctions.js";
 
 function BookDetail({ book }) {
   const dispatch = useDispatch();
@@ -15,7 +15,6 @@ function BookDetail({ book }) {
   return (
     <div className="all">
       <img className="imageDetail" src={book.cover} alt="" />
-
       <div className="rightSide">
         <div className="data">
           <div className="titleBook">
@@ -24,7 +23,7 @@ function BookDetail({ book }) {
           <div className="autorBook">
             <h3>Autor/a: {book.author}</h3>
           </div>
-          <div className="detalles">
+          <div className="details">
             <h3>Detalles</h3>
           </div>
           <div>
@@ -39,11 +38,11 @@ function BookDetail({ book }) {
             <span className="infoTitle">Páginas:</span>{" "}
             <span>{book.pages} págs.</span>
           </div>
-          <div className="detalles">
+          <div className="details">
             <h3>Contenido</h3>
           </div>
           <div className="contentBook">{content}</div>
-          <div className="detalles">
+          <div className="details">
             <h3>Categorías</h3>
           </div>
           <div className="categContainer">
@@ -54,13 +53,9 @@ function BookDetail({ book }) {
             ))}
           </div>
           <div className="link">
-            <a className="link" href={book.url_download} target="">
-              Enlace a Open Libra para abrir/descargar PDF
-            </a>
+            <a className="link" href={book.url_download} target="">Enlace a Open Libra para abrir/descargar PDF</a>
           </div>
-          <button className="volver" onClick={volver}>
-            VOLVER
-          </button>
+          <button className="volver" onClick={volver}>VOLVER</button>
         </div>
       </div>
     </div>

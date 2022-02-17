@@ -20,7 +20,7 @@ function Search() {
     setBook("");
   }
 
-  //"Todos" botón, resetea las paginas y trae todos los libros,
+  //"Todos" botón, resetea filtros y categoria y trae todos los libros,
   function handleAll() {
     dispatch(query(true));
     dispatch(getBooks(0, 1, "all"));
@@ -38,9 +38,7 @@ function Search() {
         />
         <input className="buttonSearch" type="submit" value="Buscar" />
       </form>
-      <button className="buttonSearch" onClick={() => handleAll()}>
-        Todos
-      </button>
+      <button className="buttonSearch" onClick={() => handleAll()}>Todos</button>
     </div>
   );
 }
