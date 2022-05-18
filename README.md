@@ -5,6 +5,7 @@ Puede verse el detalle de un libro cliqueando sobre él. En el detalle tienes un
 
 ## Demo 
 Puedes ver la App en funcionamiento aqui: https://lucianaher.github.io/LibrosGratuitos/
+Actualmente la Api de Open Libra tiene su certificado de acceso vencido, por lo que hoy, al 18/05/2022, lamentable no se puede acceder a los datos
 #### Deployado en GitHub Pages
 ## Capturas de pantalla de la app:
 ![](/Cap1.jpg)
